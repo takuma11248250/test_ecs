@@ -1,0 +1,13 @@
+{
+	"日付": "date",
+	"チャネル": "channel",
+	"媒体": "medium",
+	"訪問数": "session",
+	"ページビュー": "pageview",
+	"離脱数": "bounce",
+	"滞在時間": "session_duration",
+	"直帰数": "exits",
+	"ユーザー数": "users",
+	"新規ユーザー数": "new_users",
+	"コンバージョン数": "conversions"
+}

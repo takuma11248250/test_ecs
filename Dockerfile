@@ -12,7 +12,7 @@ RUN ./aws/install
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 
-COPY ./requirements.txt ./
+COPY ./requirements.txt ./opt/column_re.py ./opt/header_transform_rule.json ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["python", "column_re.py"]

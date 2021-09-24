@@ -2,6 +2,7 @@ version: '3'
 services:
   python3:
     build: .
+    image: test_ecs/python3
     container_name: 'python3'
     working_dir: '/root/opt'
     tty: true

@@ -1,0 +1,28 @@
+{
+    "family": "test-ecs",
+    "taskRoleArn": "arn:aws:iam::<アカウントID>:role/test_ecs_task_role",
+    "executionRoleArn": "arn:aws:iam::<アカウントID>:role/test_ecs_task_role",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "python3",
+            "image": "<アカウントID>.dkr.ecr.ap-northeast-1.amazonaws.com/test_ecs/python3:latest",
+            "essential": true,
+            "readonlyRootFilesystem": false,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "test_ecs",
+                    "awslogs-region": "ap-northeast-1",
+                    "awslogs-datetime-format": "%Y-%m-%d %H:%M:%S",
+                    "awslogs-stream-prefix": "test-ecs/python3"
+            }
+        }
+    }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
+}
